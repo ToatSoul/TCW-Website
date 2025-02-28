@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToatSoul Industries | The Crimson Watch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-biohazard"></i> TSI presents: The Crimson Watch</h1>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="#server-status"><i class="fas fa-server"></i> Server Status</a></li>
+                <li><a href="#discord"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a href="marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+                <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Support</a></li>
+                <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to DayZ - The Crimson Watch DayZ</h2>
+        <p>Survive, explore, and dominate in our custom DayZ experience. Face the undead, brave the elements, and forge
+            your own path in a world gone mad.</p>
+        <a href="#about" class="btn">Learn More</a>
+    </section>
+
+    <section id="about">
+        <h2>About Our Server</h2>
+        <p class="sci-fi-intro">A Sci-Fi Survival Experience in DayZ</p>
+        <p>The year is 2147, and Earth as we knew it is gone. Ravaged by war, corporate greed, and interdimensional experiments gone wrong, the world has been plunged into chaos. You are a survivor in Sector 09, the last habitable zone controlled by rogue factions, AI war machines, and alien horrors.</p>
+        
+        <h3>What Sets Us Apart?</h3>
+        <ul class="feature-list">
+            <li><span class="feature-highlight">🔴 Futuristic Combat & AI Enemies</span> – Face off against heavily armed AI squads, rogue androids, and extraterrestrial creatures. The days of brainless zombies are over—these enemies shoot back, hunt in squads, and adapt to your tactics.</li>
+            
+            <li><span class="feature-highlight">🔴 High-Tech Weapons & Gear</span> – Arm yourself with energy rifles, plasma cannons, cybernetic enhancements, and thermal optics. Standard firearms will only get you so far in this new world.</li>
+            
+            <li><span class="feature-highlight">🔴 Advanced Bases & Defenses</span> – Build high-tech fortresses with automated turrets, energy barriers, and keycard-secured bunkers to keep out hostile forces.</li>
+            
+            <li><span class="feature-highlight">🔴 Dystopian Open World</span> – Explore abandoned neon-lit cities, corporate labs, and alien-infested wastelands where danger lurks behind every shadow. Acid rain, toxic fog, and interdimensional anomalies make every step a calculated risk.</li>
+            
+            <li><span class="feature-highlight">🔴 Vehicles from the Future</span> – Take to the roads (or the skies) with hoverbikes, armored drones, and VTOL aircraft. The Crimson Watch is vast, and speed is survival.</li>
+            
+            <li><span class="feature-highlight">🔴 Faction Warfare</span> – Join the ranks of The Crimson Watch, a rogue military force fighting to restore order, or side with The Syndicate, a ruthless band of mercenaries scavenging advanced tech for profit. Or, carve your own path and survive by any means necessary.</li>
+        </ul>
+        
+        <h3>Do You Have What It Takes?</h3>
+        <p>This is not just another survival server—it's a fight for the future. Will you stand with The Crimson Watch, or will you be swallowed by the chaos of this new world?</p>
+    </section>
+
+    <section id="server-status">
+        <h2>Server Status</h2>
+        <p id="status">Checking...</p>
+        <div id="server-info">
+            <div>
+                <i class="fas fa-users"></i>
+                <span id="player-count">--/--</span>
+            </div>
+            <div>
+                <i class="fas fa-map-marker-alt"></i>
+                <span id="map-name">--</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="discord">
+        <h2>Join Our Discord</h2>
+        <p>Connect with other survivors, stay updated on server news, and participate in community events.</p>
+        <a href="https://discord.gg/qPyAdCkJfM" target="_blank"><i class="fab fa-discord"></i> Join The
+            Community</a>
+    </section>
+
+    <script>
+        function checkServerStatus() {
+            fetch('https://api.battlemetrics.com/servers/YOUR_SERVER_ID')
+                .then(response => response.json())
+                .then(data => {
+                    const serverData = data.data.attributes;
+                    document.getElementById('status').textContent = serverData.status === "online" ? "Online" : "Offline";
+                    document.getElementById('status').className = serverData.status === "online" ? "online" : "offline";
+
+                    if (serverData.status === "online") {
+                        document.getElementById('player-count').textContent = `${serverData.players}/${serverData.maxPlayers}`;
+                        document.getElementById('map-name').textContent = serverData.details?.map || "Unknown";
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('status').textContent = "Error fetching server status";
+                    document.getElementById('status').className = "error";
+                });
+        }
+
+        checkServerStatus();
+        // Refresh status every 5 minutes
+        setInterval(checkServerStatus, 300000);
+    </script>
+</body>
+
+</html>

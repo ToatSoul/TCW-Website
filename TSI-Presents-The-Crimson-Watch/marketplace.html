@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToatSoul Industries | Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="marketplace.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-biohazard"></i> TSI presents: The Crimson Watch</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="index.html#server-status"><i class="fas fa-server"></i> Server Status</a></li>
+                <li><a href="index.html#discord"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a href="marketplace.html" class="active"><i class="fas fa-store"></i> Marketplace</a></li>
+                <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Support</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="marketplace">
+        <h2>Item Retexturing</h2>
+        <p>Customize your gameplay experience with unique item textures. Browse our collection or request a custom design.</p>
+        
+        <div class="marketplace-tabs">
+            <button class="tab-btn active" data-tab="browse">Browse Items</button>
+            <button class="tab-btn" data-tab="request">Request Custom</button>
+            <button class="tab-btn" data-tab="queue">Queue Status</button>
+            <button class="tab-btn" data-tab="priority">Priority Queue</button>
+        </div>
+        
+        <div id="browse" class="tab-content active">
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="weapons">Weapons</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="vehicles">Vehicles</option>
+                    <option value="base">Base Items</option>
+                </select>
+                <input type="text" id="search-items" placeholder="Search items...">
+            </div>
+            
+            <div class="items-grid">
+                <!-- Items will be loaded here via JavaScript -->
+            </div>
+        </div>
+        
+        <div id="request" class="tab-content">
+            <form id="custom-request-form">
+                <div class="form-group">
+                    <label for="request-item"><i class="fas fa-box"></i> Item Type</label>
+                    <select id="request-item" required>
+                        <option value="">Select an item</option>
+                        <option value="weapon">Weapon</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="vehicle">Vehicle</option>
+                        <option value="base">Base Item</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specific-item"><i class="fas fa-tag"></i> Specific Item</label>
+                    <input type="text" id="specific-item" required placeholder="e.g. M4, Plate Carrier, etc.">
+                </div>
+                
+                <div class="form-group">
+                    <label for="request-description"><i class="fas fa-edit"></i> Design Description</label>
+                    <textarea id="request-description" rows="4" required placeholder="Describe your desired retexture (colors, patterns, theme, etc.)"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="request-reference"><i class="fas fa-image"></i> Reference Image (optional)</label>
+                    <input type="file" id="request-reference" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> In-Game Username</label>
+                    <input type="text" id="username" required placeholder="Your in-game name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority-queue"><i class="fas fa-star"></i> Priority Queue</label>
+                    <select id="priority-queue">
+                        <option value="standard">Standard Queue (Free)</option>
+                        <option value="priority">Priority Queue (5 Credits)</option>
+                        <option value="express">Express Queue (10 Credits)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn">Submit Request</button>
+            </form>
+        </div>
+        
+        <div id="queue" class="tab-content">
+            <div class="queue-status">
+                <h3>Current Queue Status</h3>
+                <div class="queue-info">
+                    <div class="queue-item">
+                        <span class="queue-label">Standard Queue:</span>
+                        <span class="queue-value" id="standard-queue-length">--</span>
+                        <span class="queue-time">Est. Wait: <span id="standard-wait-time">--</span></span>
+                    </div>
+                    <div class="queue-item">
+                        <span class="queue-label">Priority Queue:</span>
+                        <span class="queue-value" id="priority-queue-length">--</span>
+                        <span class="queue-time">Est. Wait: <span id="priority-wait-time">--</span></span>
+                    </div>
+                    <div class="queue-item">
+                        <span class="queue-label">Express Queue:</span>
+                        <span class="queue-value" id="express-queue-length">--</span>
+                        <span class="queue-time">Est. Wait: <span id="express-wait-time">--</span></span>
+                    </div>
+                </div>
+                
+                <div id="my-requests">
+                    <h3>My Requests</h3>
+                    <div id="user-requests">
+                        <!-- User's requests will be loaded here -->
+                        <p class="login-prompt">Please login to view your requests</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="priority" class="tab-content">
+            <div class="priority-queue-container">
+                <h3>Priority Queue Packages</h3>
+                <p>Get ahead in the game with priority queue access. Join servers faster and skip the regular queue.</p>
+                
+                <div class="priority-packages">
+                    <div class="priority-package">
+                        <div class="package-header">
+                            <h4>Bronze</h4>
+                            <span class="package-price">5 Credits</span>
+                        </div>
+                        <div class="package-duration">1 Week</div>
+                        <ul class="package-features">
+                            <li>Server join priority</li>
+                            <li>Skip 50% of regular queue</li>
+                            <li>Special bronze name tag</li>
+                        </ul>
+                        <button class="purchase-btn" data-package="bronze">Purchase</button>
+                    </div>
+                    
+                    <div class="priority-package featured">
+                        <div class="package-header">
+                            <h4>Silver</h4>
+                            <span class="package-price">12 Credits</span>
+                        </div>
+                        <div class="package-duration">1 Month</div>
+                        <ul class="package-features">
+                            <li>High server join priority</li>
+                            <li>Skip 75% of regular queue</li>
+                            <li>Special silver name tag</li>
+                            <li>1 free item retexture</li>
+                        </ul>
+                        <button class="purchase-btn" data-package="silver">Purchase</button>
+                    </div>
+                    
+                    <div class="priority-package">
+                        <div class="package-header">
+                            <h4>Gold</h4>
+                            <span class="package-price">25 Credits</span>
+                        </div>
+                        <div class="package-duration">3 Months</div>
+                        <ul class="package-features">
+                            <li>Highest server join priority</li>
+                            <li>Skip 100% of regular queue</li>
+                            <li>Special gold name tag</li>
+                            <li>3 free item retextures</li>
+                            <li>Custom spawn loadout</li>
+                        </ul>
+                        <button class="purchase-btn" data-package="gold">Purchase</button>
+                    </div>
+                </div>
+                
+                <div class="priority-info">
+                    <h4>Current Priority Status</h4>
+                    <div id="user-priority-status">
+                        <p class="status-message">You don't have any active priority queue packages.</p>
+                        <!-- Active priority package info will be displayed here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="marketplace.js"></script>
+</body>
+
+</html>

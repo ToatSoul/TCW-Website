@@ -1,0 +1,44 @@
+Here’s a **boilerplate Terms of Service (ToS)** for **The Crimson Watch** website, covering user accounts, rules, and responsibilities. You can customize it further based on specific server policies.  
+
+---
+
+# **Terms of Service**  
+**Last Updated: [Insert Date]**  
+
+## **1. Acceptance of Terms**  
+By creating an account on **The Crimson Watch** website, you agree to comply with these Terms of Service (**"ToS"**). If you do not agree to these terms, you may not use our services.  
+
+## **2. Account Registration & Security**  
+- You must be at least **13 years old** (or the minimum age required in your country) to create an account.  
+- You are responsible for maintaining the security of your account. **Sharing accounts, using unauthorized access methods, or engaging in fraudulent activity is strictly prohibited.**  
+- The Crimson Watch reserves the right to **suspend or terminate accounts** that violate these terms.  
+
+## **3. User Conduct**  
+By using our website and services, you agree **not to**:  
+- Engage in **hacking, cheating, or exploiting** game mechanics.  
+- Post, share, or distribute **harmful, illegal, or offensive content** (e.g., hate speech, harassment, or threats).  
+- Impersonate other users, staff, or third parties.  
+- Attempt to **sell, trade, or monetize** in-game items in violation of server policies.  
+- Violate any **local, state, or international laws** while using our services.  
+
+## **4. Game & Server Policies**  
+- The Crimson Watch is a **private game server** and is not affiliated with Bohemia Interactive.  
+- All in-game interactions, trades, and faction activities must comply with server rules, which may be updated periodically.  
+- Admins reserve the right to issue **bans, mutes, or warnings** for rule violations.  
+
+## **5. Privacy & Data Collection**  
+- We collect **basic account information** (username, email) to provide access to our services.  
+- We **do not** sell or share your data with third parties, except as required by law.  
+- Your interactions with our website may be logged for **security and moderation purposes**.  
+
+## **6. Modifications to Terms**  
+We reserve the right to **update these Terms of Service** at any time. Changes will be posted on this page, and continued use of our website or game server **constitutes acceptance of the updated terms**.  
+
+## **7. Contact Information**  
+For any questions regarding these Terms of Service, please contact us at **[Insert Support Email]** or via our **Discord Server**.  
+
+**By creating an account, you acknowledge that you have read, understood, and agreed to these Terms of Service.**  
+
+---
+
+This covers the essentials for a **DayZ private server website**. Let me know if you need additional clauses for things like donations, refunds, or third-party integrations! 🚀

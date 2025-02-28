@@ -1,0 +1,61 @@
+Privacy Policy for The Crimson Watch DayZ Server
+
+Effective Date: [Insert Date]
+
+1. Introduction
+Welcome to The Crimson Watch DayZ Server. We respect your privacy and are committed to protecting any personal information you may provide while using our server and related services. This Privacy Policy explains what data we collect, how we use it, and your rights regarding your information.
+
+2. Information We Collect
+When you join and interact with The Crimson Watch DayZ Server, we may collect the following types of data:
+
+In-Game Data: Player usernames, Steam IDs, and gameplay statistics.
+
+Communication Data: Messages sent via in-game chat, Discord, or other server-related platforms.
+
+Technical Data: IP addresses, connection logs, and hardware information for server security and optimization.
+
+Voluntary Information: Any data you provide voluntarily, such as feedback or participation in server events.
+
+3. How We Use Your Information
+We use the collected data to:
+
+Provide and maintain server functionality.
+
+Monitor and enforce server rules.
+
+Improve user experience and optimize server performance.
+
+Communicate important updates, announcements, or changes.
+
+Detect and prevent fraudulent or malicious activity.
+
+4. Data Sharing and Disclosure
+We do not sell or share your personal information with third parties, except in the following circumstances:
+
+Legal Compliance: If required by law enforcement or government authorities.
+
+Server Moderation: To enforce rules and maintain fair play, certain information may be shared with server administrators and moderators.
+
+Security Measures: In case of detected cheating, hacking, or other malicious activities, relevant data may be shared with anti-cheat services or affiliated servers.
+
+5. Data Security
+We take appropriate measures to protect your data from unauthorized access, alteration, or loss. However, no security system is completely foolproof, and we cannot guarantee absolute security.
+
+6. Your Rights and Choices
+You have the right to:
+
+Request access to the personal data we hold about you.
+
+Request corrections to any inaccurate or incomplete information.
+
+Request deletion of your data, subject to any legal or administrative obligations.
+
+Opt out of non-essential communications.
+
+7. Changes to This Privacy Policy
+We may update this Privacy Policy from time to time. Any changes will be posted on our official platforms, and continued use of the server after modifications constitutes acceptance of the updated policy.
+
+8. Contact Information
+If you have any questions or concerns about this Privacy Policy, please contact the server administrators via [Insert Contact Method].
+
+By using The Crimson Watch DayZ Server, you agree to the terms outlined in this Privacy Policy.

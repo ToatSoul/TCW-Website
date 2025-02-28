@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToatSoul Industries | Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-biohazard"></i> TSI presents: The Crimson Watch</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="index.html#server-status"><i class="fas fa-server"></i> Server Status</a></li>
+                <li><a href="index.html#discord"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a href="marketplace.html"><i class="fas fa-store"></i> Marketplace</a></li>
+                <li><a href="tickets.html"><i class="fas fa-ticket-alt"></i> Support</a></li>
+                <li><a href="login.html" class="active"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="login-section">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Account Access</h2>
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                </div>
+            </div>
+
+            <div id="login" class="auth-form active">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="login-email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="login-password" required placeholder="Your password">
+                        <span class="password-toggle" onclick="togglePassword('login-password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-actions">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-full"><i class="fas fa-sign-in-alt"></i> Login</button>
+                </form>
+            </div>
+
+            <div id="signup" class="auth-form">
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="signup-email" required placeholder="Your email address">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-username"><i class="fas fa-user"></i> In-game Username</label>
+                        <input type="text" id="signup-username" required placeholder="Your in-game username">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-steam-uid"><i class="fab fa-steam"></i> Steam UID</label>
+                        <input type="text" id="signup-steam-uid" required placeholder="Your Steam 64ID">
+                        <div class="input-hint">
+                            <i class="fas fa-info-circle"></i> 
+                            <span>Find your Steam ID by visiting your Steam profile page</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="signup-password" required placeholder="Create a password">
+                        <span class="password-toggle" onclick="togglePassword('signup-password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                        <input type="password" id="signup-confirm-password" required placeholder="Confirm your password">
+                        <span class="password-toggle" onclick="togglePassword('signup-confirm-password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="form-group terms">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a></label>
+                    </div>
+                    <button type="submit" class="btn btn-full"><i class="fas fa-user-plus"></i> Create Account</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
